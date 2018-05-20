@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Sign up Page</title>
+</head>
+<body>
+
+	<h3>Welcome To Registration Page</h3>
+
+	<br />
+
+	<br />
+
+	<form action="RegisterUserController" method="post">
+		<br /> First Name: <input type="text" name="firstname" onemptied="setCustomValidity('Plz enter FirstName')"><br />
+		<br /> Last Name: <input type="text" name="lastname" required
+			onemptied="setCustomValidity('Plz enter LastName')"><br />
+		<br /> Gender: <input type="radio" name="gender" value="male" checked>
+		Male | <input type="radio" name="gender" value="female">Female<br />
+		<br /> DATE OF BIRTH: <input type="text" placeholder="DD/MM/YYYY"
+			required class="datepicker" name="dateofbirth" value=""
+			pattern="\d{1,2}/\d{1,2}/\d{4}"
+			onemptied="setCustomValidity('Please fill your DOB')" /> <br /> <br />ADDRESS:
+		<input type="text" name="commaddress" required
+			onemptied="setCustomValidity('Plz enter Address')"><br /> <br />EMAIL:
+		<input type="email" name="emailid" placeholder="Enter your email" required="required"> <br /> <br />PASSWORD:
+		<input type="password" name="password" required
+			onemptied="setCustomValidity('Plz enter Password')"> <br />
+		<br />CONTACT: <input type="text" name="contact" required="required"  pattern="[0-9]{10}" value="" title="Invalid Mobile number" /><br />
+		<br />Signup as:<select name="usertype">
+			<option value="HR">HR</option>
+			<option value="TRAINER">TRAINER</option>
+			<option value="EMPLOYEE">EMPLOYEE</option>
+
+		</select> <br /><br/><br/> <input type="submit">
+	</form>
+
+</body>
+</html>

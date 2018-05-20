@@ -1,0 +1,20 @@
+// create registration table script
+
+CREATE TABLE Registration (employeeId INT  PRIMARY KEY, firstName varchar(255), lastName varchar(255), gender varchar(255), dateOfBirth varchar(255), commAddress varchar(255), emailid varchar(255), password varchar(255), contact varchar(255), userType varchar(255), status varchar(255) );
+
+select h2version() from dual
+//H2 Version issue : You have the H2 driver in webapp class loader level (under web-inf\lib) but it's not not accessible by the Tomcat's catalina classes (in server classpath). If you don't have the tomcat-jdbc in the local webapp, then the task of connection pool creation is delegated to the system/server classloader which clearly cannot access the local webapp classloader.
+
+EMPID, EMPNAME, EMAIL, ADDRESS, CONTACT, PASSWORD, ROLETYPE 
+
+EMPID, SKILLID
+
+SKILLID, SKILLNAME, DESCRIPTION
+
+
+//
+CREATE TABLE Registration (employeeId INT auto_increment PRIMARY KEY, firstName varchar(255), lastName varchar(255), gender varchar(255), dateOfBirth varchar(255), commAddress varchar(255), emailid varchar(255), password varchar(255), contact varchar(255), userType varchar(255), status varchar(255) );
+
+create table skills(skillid int auto_increment primary key, userType, skillname varchar(255), skillDescription varchar(255) )
+
+create table Competency (employeeId int foreign key  (fk_1) referencess registration(employeeid), skillid  varchar(255) referencess skills(skillid), skillLevel varchar(255) )
